@@ -1,0 +1,307 @@
+@font-face {
+    font-family: "opensans";
+    src: url("assets/fonts/OpenSans-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "zendots";
+    src: url("assets/fonts/ZenDots-Regular.ttf");
+}
+
+
+/* Generales */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+body{
+    font-family: "zendots";
+    background: rgb(236, 236, 236);
+    font-size: 20px;
+    background-attachment: fixed;
+}
+
+/* Barra de navegacion -Header- */
+
+header{
+    width: 100%;
+    height: 90px;
+    background: rgba(53,103,164,0.8);
+    position: fixed;
+    display: block;
+    text-transform: uppercase;
+}
+
+header ul{
+    display: block;
+    width: 50%;
+    height: inherit;
+    margin: 0px auto;
+    margin-top: -3px;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 90px;
+}
+
+header  a{
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+
+header a:hover,
+.actived{
+    background: rgba(0,0,0,0.8);
+}
+header #logo a:hover{
+    background: transparent;
+    color: black;
+    transform: scale(1.50,1.50);
+}
+
+#logo a{
+    transition: color 500ms,transform 500ms;
+}
+
+#logo{
+    font-family: "opensans";
+    font-size: 30px;
+
+}
+
+/* Contenedor principal */
+
+
+
+#content{
+    min-height: 1000px;
+    height: auto;
+    width: 75%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 40px black;
+    border-left: 1px solid #b7b7b7b7;
+    border-right: 1px solid #b7b7b7b7;
+    background: rgba(255,255,255,0.7);
+    padding-top: 120px;
+
+}
+
+/* Pie de Pagina */
+
+footer{
+    width: 75%;
+    margin: 0px auto;
+    padding-top: 15px;
+    color: rgba(0,0,0,0.5);
+}
+
+/* Sobre mí */
+
+#title{
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 20px;
+}
+#title h1{
+    font-family: "opensans";
+    font-size:60px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+#title h2{
+    font-family: "opensans";
+    font-size: 25px;
+    color: gray;  
+}
+
+article.about{
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+.about h2{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.about p{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 22px;
+    text-align: justify;
+}
+
+/* Sección con formulario */
+
+.container{
+    padding-top: 10px;
+    padding: 50px;
+    
+}
+
+.container .image{
+    float: left;
+    width: 47%;
+}
+
+.container .image img{
+    width: 100%;
+}
+
+.container .data{
+    float: right;
+    width: 48%;
+    margin-left: 40px;
+}
+
+.container h2{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+form{
+    width: 80%;
+
+}
+
+form label{
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea{
+    width: 40%;
+    padding: 5px;
+}
+
+form button,
+form input[type="submit"],
+.button-edit,
+.button-delete{
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    margin-top: 15px;
+    color: white;
+    background: rgba(53,103,164,1);
+    border: 1px solid  rgba(53,103,164,0.8);
+    cursor: pointer;
+}
+
+.button-edit,
+.button-delete{
+    width: 20%;
+    float: left;
+    margin-right: 5px;
+    text-decoration: none;
+}
+.button-edit{
+    background: orange;
+    border: none;
+}
+
+.button-delete{
+    background: red;
+    border: none;
+}
+
+
+
+form button:hover,
+form input[type="submit"]:hover{
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    margin-top: 15px;
+    color: white;
+    background: rgba(53,103,164,0.8);
+    border: 1px solid  rgba(53,103,164,0.8);
+    cursor: pointer;
+}
+
+
+form input[disabled]{
+    opacity: 0.4;
+   cursor: not-allowed;
+}
+
+.form-error{
+    font-size: 13px;
+    padding: 3px;
+    background:red;
+    color: white;
+    margin-left: 5px;
+}
+
+.message{
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+.success{
+    background-color: green;
+    color: white;
+}
+
+.message a{
+    color: white;
+}
+
+.failed{
+    background: red;
+    color: white;
+}
+
+/* Pagina de proyectos  */
+
+.project{
+    list-style: none;
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.project .image{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.project img{
+    width: 100%;
+
+}
+
+.project a{
+    text-decoration: none;
+    color: black;
+}
